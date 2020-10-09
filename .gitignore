@@ -1,0 +1,8 @@
+*
+!*/
+!*.*
+.vscode/
+test.c
+test.cpp
+tempCodeRunnerFile.cpp
+.DS_Store
