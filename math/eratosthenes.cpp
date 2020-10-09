@@ -28,9 +28,42 @@ vector<int> eratosthenes(int n) {
 int main() {
     int n = 10;
     cout << "10^1" << endl << "-------------" << endl;
-    auto example1 = eratosthenes(n); // 2 3 5 7
+    auto example1 = eratosthenes(n);
     for (auto& num : example1) cout << num << endl;
+/*
+2
+3
+5
+7
+*/
     cout << "10^2" << endl << "-------------" << endl;
     auto example2 = eratosthenes(pow(n, 2));
     for (auto& num : example2) cout << num << endl;
+/*
+2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+31
+37
+41
+43
+47
+53
+59
+61
+67
+71
+73
+79
+83
+89
+97
+*/
 }
