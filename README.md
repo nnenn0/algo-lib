@@ -8,3 +8,4 @@
 
 ## グラフ
 - [DFS](https://github.com/nnenn0/algo-lib/blob/main/math/dfs.cpp)
+- [ダイクストラ法](https://github.com/nnenn0/algo-lib/blob/main/math/dijkstra.cpp)
