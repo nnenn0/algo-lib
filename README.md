@@ -5,6 +5,7 @@
 - [素因数分解](https://github.com/nnenn0/algo-lib/blob/main/Math/prime_factorize.cpp)
 - [素数判定](https://github.com/nnenn0/algo-lib/blob/main/Math/is_prime.cpp)
 - [エラトステネスの篩](https://github.com/nnenn0/algo-lib/blob/main/Math/eratosthenes.cpp)
+- [modint](https://github.com/nnenn0/algo-lib/blob/main/Math/modint.cpp)
 
 ## Graph
 - [DFS](https://github.com/nnenn0/algo-lib/blob/main/Graph/dfs.cpp)
