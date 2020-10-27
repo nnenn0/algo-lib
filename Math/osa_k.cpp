@@ -2,6 +2,14 @@
 #include <vector>
 #include <numeric>
 
+/*
+
+素因数分解を高速で行う。
+前処理 O(NloglogN)
+計算量 O(logN)
+
+*/
+
 std::vector<long long> sieve(long long n) {
     std::vector<long long> res(n+1);
     std::iota(res.begin(), res.end(), 0);
