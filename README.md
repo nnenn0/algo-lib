@@ -4,6 +4,7 @@
 ## Math
 - [約数列挙](https://github.com/nnenn0/algo-lib/blob/main/Math/divisor.cpp)
 - [素因数分解](https://github.com/nnenn0/algo-lib/blob/main/Math/prime_factorize.cpp)
+- [高速素因数分解](https://github.com/nnenn0/algo-lib/blob/main/Math/osa_k.cpp)
 - [素数判定](https://github.com/nnenn0/algo-lib/blob/main/Math/is_prime.cpp)
 - [エラトステネスの篩](https://github.com/nnenn0/algo-lib/blob/main/Math/eratosthenes.cpp)
 - [modint](https://github.com/nnenn0/algo-lib/blob/main/Math/modint.cpp)
