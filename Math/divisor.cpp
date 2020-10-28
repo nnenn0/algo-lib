@@ -4,6 +4,12 @@
 
 using namespace std;
 
+/*
+
+nの約数を全て列挙する。
+
+*/
+
 vector<long long> divisor(long long n) {
     vector<long long> ret;
     for (long long i = 1; i * i <= n; ++i) {
