@@ -45,6 +45,12 @@ template<int MOD> struct Modint {
     constexpr bool operator != (const Modint& r) const noexcept {
         return this->val != r.val;
     }
+    friend constexpr istream& operator >> (istream& is, Modint<MOD>& x) noexcept {
+        is >> x.val;
+        x.val %= MOD;
+        if (x.val < 0) x.val += MOD;
+        return is;
+    }
     friend constexpr ostream& operator << (ostream &os, const Modint<MOD>& x) noexcept {
         return os << x.val;
     }
@@ -66,6 +72,9 @@ int main() {
     mint b = 74324;
     mint c = 13231;
     mint d = 8432455;
+
+    mint e; cin >> e;
+    cout << e << endl;
 
     cout << (a * b + c) / d << endl;
 }
