@@ -2,6 +2,7 @@
 使用/学習したデータ構造、アルゴリズムをC++で実装します。
 
 ## Math
+- [組み合わせ](https://github.com/nnenn0/algo-lib/blob/main/Math/ncr.cpp)
 - [約数列挙](https://github.com/nnenn0/algo-lib/blob/main/Math/divisor.cpp)
 - [約数個数配列](https://github.com/nnenn0/algo-lib/blob/main/Math/divisor_quantity_array.cpp)
 - [素因数分解](https://github.com/nnenn0/algo-lib/blob/main/Math/prime_factorize.cpp)
