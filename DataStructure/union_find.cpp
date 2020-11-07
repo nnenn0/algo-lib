@@ -11,25 +11,39 @@ using namespace std;
 */
 
 struct UnionFind {
-    vector<int> par;
-    UnionFind(int N) : par(N) {
-        for(int i = 0; i < N; i++) par[i] = i;
-    }
-    int root(int x) {
-        if (par[x] == x) return x;
-        return par[x] = root(par[x]);
-    }
-    void unite(int x, int y) {
-        int rx = root(x);
-        int ry = root(y);
-        if (rx == ry) return;
-        par[rx] = ry;
+    vector<int> size, parents;
+    UnionFind() {}
+    UnionFind(int n) {
+        size.resize(n, 0);
+        parents.resize(n, 0);
+        for (int i = 0; i < n; i++) {
+            make_tree(i);
         }
-    bool same(int x, int y) {
-        int rx = root(x);
-        int ry = root(y);
-        return rx == ry;
     }
+    void make_tree(int x) {
+        parents[x] = x;
+        size[x] = 1;
+    }
+    bool is_same(int x, int y) { return get_root(x) == get_root(y); }
+    void unite(int x, int y) {
+        x = get_root(x);
+        y = get_root(y);
+        if (x == y) return;
+        if (size[x] > size[y]) {
+            parents[y] = x;
+            size[x] += size[y];
+        } else {
+            parents[x] = y;
+            size[y] += size[x];
+        }
+    }
+    int get_root(int x) {
+        if (x != parents[x]) {
+            parents[x] = get_root(parents[x]);
+        }
+        return parents[x];
+    }
+    int get_size(int x) { return size[get_root(x)]; }
 };
 
 int main() {
@@ -42,7 +56,7 @@ int main() {
     int q; cin >> q;
     for (int i = 0; i < q; ++i) {
         int s, t; cin >> s >> t;
-        if (uf.same(s, t)) cout << "yes" << endl;
+        if (uf.is_same(s, t)) cout << "yes" << endl;
         else cout << "no" << endl;
     }
 }
