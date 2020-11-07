@@ -10,6 +10,7 @@
 - [高速素因数分解](https://github.com/nnenn0/algo-lib/blob/main/Math/osa_k.cpp)
 - [素数判定](https://github.com/nnenn0/algo-lib/blob/main/Math/is_prime.cpp)
 - [エラトステネスの篩](https://github.com/nnenn0/algo-lib/blob/main/Math/eratosthenes.cpp)
+- [modpow](https://github.com/nnenn0/algo-lib/blob/main/Math/modpow.cpp)
 - [modint](https://github.com/nnenn0/algo-lib/blob/main/Math/modint.cpp)
 
 ## Graph
