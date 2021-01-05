@@ -18,6 +18,7 @@
 - [ダイクストラ法](https://github.com/nnenn0/algo-lib/blob/main/Graph/dijkstra.cpp)
 - [ベルマンフォード法](https://github.com/nnenn0/algo-lib/blob/main/Graph/bellman_ford.cpp)
 - [ワーシャルフロイド法](https://github.com/nnenn0/algo-lib/blob/main/Graph/warshall_floyd.cpp)
+- [クラスカル法](https://github.com/nnenn0/algo-lib/blob/main/Graph/kruskal.cpp)
 
 ## DataStructure
 - [Union-Find](https://github.com/nnenn0/algo-lib/blob/main/DataStructure/union_find.cpp)
