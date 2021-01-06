@@ -19,6 +19,7 @@
 - [ベルマンフォード法](https://github.com/nnenn0/algo-lib/blob/main/Graph/bellman_ford.cpp)
 - [ワーシャルフロイド法](https://github.com/nnenn0/algo-lib/blob/main/Graph/warshall_floyd.cpp)
 - [クラスカル法](https://github.com/nnenn0/algo-lib/blob/main/Graph/kruskal.cpp)
+- [プリム法](https://github.com/nnenn0/algo-lib/blob/main/Graph/prim.cpp)
 
 ## DataStructure
 - [Union-Find](https://github.com/nnenn0/algo-lib/blob/main/DataStructure/union_find.cpp)
