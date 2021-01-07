@@ -12,6 +12,7 @@
 - [エラトステネスの篩](https://github.com/nnenn0/algo-lib/blob/main/Math/eratosthenes.cpp)
 - [modpow](https://github.com/nnenn0/algo-lib/blob/main/Math/modpow.cpp)
 - [modint](https://github.com/nnenn0/algo-lib/blob/main/Math/modint.cpp)
+- [nCk](https://github.com/nnenn0/algo-lib/blob/main/Math/nck.cpp)
 
 ## Graph
 - [DFS](https://github.com/nnenn0/algo-lib/blob/main/Graph/dfs.cpp)
