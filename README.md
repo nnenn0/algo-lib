@@ -26,3 +26,6 @@
 - [Union-Find](https://github.com/nnenn0/algo-lib/blob/main/DataStructure/union_find.cpp)
 - [SegmentTree](https://github.com/nnenn0/algo-lib/blob/main/DataStructure/segment_tree.cpp)
 - [BinaryIndexedTree(BIT)](https://github.com/nnenn0/algo-lib/blob/main/DataStructure/binary_indexed_tree.cpp)
+
+## Other
+- [座標圧縮(1D)](https://github.com/nnenn0/algo-lib/blob/main/Other/compress1d.cpp)
