@@ -5,7 +5,7 @@
 using namespace std;
 
 /* 
-    参照: X を座標圧縮して書き換える
+    参照値: X を座標圧縮して書き換える
     返り値: ソート済みの値
     compress O(n log n)
     example: ABC036 座圧
