@@ -30,3 +30,4 @@
 ## Other
 - [座標圧縮(1D)](https://github.com/nnenn0/algo-lib/blob/main/Other/compress1d.cpp)
 - [座標圧縮(2d)](https://github.com/nnenn0/algo-lib/blob/main/Other/compress2d.cpp)
+- [境界線の二分探索(整数)](https://github.com/nnenn0/algo-lib/blob/main/Other/binary_check_integer.cpp)
