@@ -22,7 +22,7 @@ constexpr long long INF = 1LL << 60;
 
 void dijkstra(const Graph& G, int s, vector<long long>& dist) {
     size_t N = G.size();
-    dist.resize(N, INF);
+    dist = vector<long long>(N, INF);
     priority_queue<P, vector<P>, greater<P>> pq;
     dist[s] = 0;
     pq.emplace(dist[s], s);
