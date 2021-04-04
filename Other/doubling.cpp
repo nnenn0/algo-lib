@@ -8,7 +8,7 @@ using namespace std;
     K回後の状態を求める。
 
     example: ABC167D Teleporter
-    // https://atcoder.jp/contests/abc167/tasks/abc167_d
+    https://atcoder.jp/contests/abc167/tasks/abc167_d
 */
 
 int main() {
