@@ -4,7 +4,7 @@
 #include <functional>
 
 /*
-SegmentTree(n, func, M): サイズnの初期化。ここでfuncは2都農区間の要素をマージする二項演算、Mはモノイドの単位元である。
+SegmentTree(n, func, M): サイズnの初期化。ここでfuncは2つの区間の要素をマージする二項演算、Mはモノイドの単位元である。
 set(k, x): k番目の要素にxを代入する。
 build(): セグメント木を構築する。
 query(a, b): 区間[a, b)に対して二項演算した結果を返す。
