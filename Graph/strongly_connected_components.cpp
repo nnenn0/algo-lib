@@ -30,7 +30,7 @@ struct SCC {
         cnt = 0;
         for (auto& v : rec) {
             if (used.at(v)) continue;
-            second_dfs(RG, v, group);
+            second_dfs(RG, v);
             ++cnt;
         }
     }
@@ -39,10 +39,10 @@ struct SCC {
         for (auto& nv : G.at(v)) if (!used[nv]) first_dfs(G, nv, rec);
         rec.push_back(v);
     }
-    void second_dfs(const Graph& RG, int v, vector<int>& group) {
+    void second_dfs(const Graph& RG, int v) {
         used.at(v) = true;
         group.at(v) = cnt;
-        for (auto& nv : RG.at(v)) if (!used[nv]) second_dfs(RG, nv, group);
+        for (auto& nv : RG.at(v)) if (!used[nv]) second_dfs(RG, nv);
     }
 };
 
