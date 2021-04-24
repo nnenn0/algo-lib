@@ -18,6 +18,7 @@ using Graph = vector<vector<int>>;
 struct SCC {
     int cnt;
     vector<bool> used;
+    vector<bool> rused;
     vector<int> group;
     SCC(const Graph& G, const Graph& RG) {
         int N = int(G.size());
@@ -26,10 +27,10 @@ struct SCC {
         vector<int> rec;
         for (int v = 0; v < N; ++v) if (!used.at(v)) first_dfs(G, v, rec);
         reverse(rec.begin(), rec.end());
-        for (int v = 0; v < N; ++v) used.at(v) = false;
+        rused = vector<bool>(N, false);
         cnt = 0;
         for (auto& v : rec) {
-            if (used.at(v)) continue;
+            if (rused.at(v)) continue;
             second_dfs(RG, v);
             ++cnt;
         }
@@ -40,9 +41,9 @@ struct SCC {
         rec.push_back(v);
     }
     void second_dfs(const Graph& RG, int v) {
-        used.at(v) = true;
+        rused.at(v) = true;
         group.at(v) = cnt;
-        for (auto& nv : RG.at(v)) if (!used[nv]) second_dfs(RG, nv);
+        for (auto& nv : RG.at(v)) if (!rused[nv]) second_dfs(RG, nv);
     }
 };
 
