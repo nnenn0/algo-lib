@@ -54,7 +54,6 @@ int main() {
         G[s].push_back(t);
         RG[t].push_back(s);
     }
-    vector<int> group;
     SCC scc(G, RG);
     int Q; cin >> Q;
     while (Q--) {
