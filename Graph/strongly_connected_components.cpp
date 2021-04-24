@@ -18,7 +18,8 @@ using Graph = vector<vector<int>>;
 struct SCC {
     int cnt;
     vector<bool> used;
-    SCC(const Graph& G, const Graph& RG, vector<int>& group) {
+    vector<int> group;
+    SCC(const Graph& G, const Graph& RG) {
         int N = int(G.size());
         used = vector<bool>(N, false);
         group = vector<int>(N, 0);
@@ -54,11 +55,11 @@ int main() {
         RG[t].push_back(s);
     }
     vector<int> group;
-    SCC scc(G, RG, group);
+    SCC scc(G, RG);
     int Q; cin >> Q;
     while (Q--) {
         int u, v; cin >> u >> v;
-        if (group[u] == group[v]) cout << 1 << endl;
+        if (scc.group[u] == scc.group[v]) cout << 1 << endl;
         else cout << 0 << endl;
     }
 }
