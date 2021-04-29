@@ -1,5 +1,11 @@
 #include <iostream>
 
+/* 
+    組み合わせ(Combination)
+    nCr
+    計算量:O(n)
+*/
+
 long long nCr(long long n, long long r) {
     long long res = 1;
     for (int i = n; i > n - r; --i) {
