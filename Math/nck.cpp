@@ -3,14 +3,21 @@
 
 using namespace std;
 
-constexpr int MOD = 1000000007;
-
-vector<long long> fact, fact_inv, inv;
 /* 
     二項係数のための前処理
     init_nCk
     計算量:O(n)
 */
+/* 
+    MODでの二項係数を求める
+    nCk O(1)
+    example: ABC145 Knight
+    https://atcoder.jp/contests/abc145/tasks/abc145_d
+*/
+
+constexpr int MOD = 1000000007;
+vector<long long> fact, fact_inv, inv;
+
 void init_nCk(int SIZE) {
     fact.resize(SIZE + 5);
     fact_inv.resize(SIZE + 5);
@@ -24,12 +31,6 @@ void init_nCk(int SIZE) {
         fact_inv[i] = fact_inv[i - 1] * inv[i] % MOD;
     }
 }
-/* 
-    MODでの二項係数を求める
-    nCk O(1)
-    example: ABC145 Knight
-    https://atcoder.jp/contests/abc145/tasks/abc145_d
-*/
 
 long long nCk(int n, int k) {
     if (n < k) return 0;
