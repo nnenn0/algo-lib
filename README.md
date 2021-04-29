@@ -30,10 +30,12 @@
 - [SegmentTreeLazy](https://github.com/nnenn0/algo-lib/blob/main/DataStructure/segment_tree_lazy.cpp)
 - [BinaryIndexedTree(BIT)](https://github.com/nnenn0/algo-lib/blob/main/DataStructure/binary_indexed_tree.cpp)
 
+## String
+- [ランレングス圧縮/復元](https://github.com/nnenn0/algo-lib/blob/main/String/run_length_encoding.cpp)
+
 ## Other
 - [座標圧縮(1D)](https://github.com/nnenn0/algo-lib/blob/main/Other/compress1d.cpp)
 - [座標圧縮(2D)](https://github.com/nnenn0/algo-lib/blob/main/Other/compress2d.cpp)
 - [境界線の二分探索(整数)](https://github.com/nnenn0/algo-lib/blob/main/Other/binary_check_integer.cpp)
 - [境界線の二分探索(小数)](https://github.com/nnenn0/algo-lib/blob/main/Other/binary_check_decimal.cpp)
 - [ダブリング](https://github.com/nnenn0/algo-lib/blob/main/Other/doubling.cpp)
-- [ランレングス圧縮/復元](https://github.com/nnenn0/algo-lib/blob/main/Other/run_length_encoding.cpp)
