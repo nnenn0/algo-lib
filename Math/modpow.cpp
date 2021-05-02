@@ -1,10 +1,11 @@
 #include <iostream>
 
-constexpr int MOD = 1000000007;
-
 /*
 modpow O(log n)
+pow(x, n)のMODを繰り返し二乗法により求める
 */
+
+constexpr int MOD = 1000000007;
 
 long long modpow(long long x, long long n) {
     long long ret = 1;
