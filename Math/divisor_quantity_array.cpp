@@ -3,7 +3,7 @@
 
 /*
 
-n以下の約数の個数がそれぞれ格納された配列を作成する。 O(nlogn)
+n以下のそれぞれの数の約数の個数が格納された配列を作成する。 O(nlogn)
 
 */
 
@@ -16,6 +16,7 @@ std::vector<long long> divisor_quantity_array(long long n) {
 }
 
 int main() {
-    auto divisor_array = divisor_quantity_array(100100);
-    std::cout << divisor_array[6] << std::endl;
+    using namespace std;
+    auto divisor_array = divisor_quantity_array(10);
+    for (int i = 1; i <= 10; ++i) cout << i << ": " << divisor_array.at(i) << endl;
 }
