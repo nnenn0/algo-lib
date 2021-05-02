@@ -17,6 +17,7 @@
 ## Graph
 - [DFS](https://github.com/nnenn0/algo-lib/blob/main/Graph/dfs.cpp)
 - [ダイクストラ法](https://github.com/nnenn0/algo-lib/blob/main/Graph/dijkstra.cpp)
+- [ダイクストラ法(2D)](https://github.com/nnenn0/algo-lib/blob/main/Graph/dijkstra2D.cpp)
 - [ベルマンフォード法](https://github.com/nnenn0/algo-lib/blob/main/Graph/bellman_ford.cpp)
 - [ワーシャルフロイド法](https://github.com/nnenn0/algo-lib/blob/main/Graph/warshall_floyd.cpp)
 - [クラスカル法](https://github.com/nnenn0/algo-lib/blob/main/Graph/kruskal.cpp)
