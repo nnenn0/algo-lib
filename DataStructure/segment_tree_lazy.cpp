@@ -8,7 +8,7 @@ using namespace std;
 /*
 SegmentTreeLazy<X,M>(n,fx,fa,fm,ex,em): モノイド(集合X, 二項演算fx,fa,fm, 単位元ex,em)についてサイズnで構築
 set(int i, X x), build(): i番目の要素をxにセット。まとめてセグ木を構築する。O(n)
-update(i,x): i 番目の要素を x に更新。O(log(n))
+update(a, b, x): [a,b)の要素を x に更新。O(log(n))
 query(a,b):  [a,b) 全てにfxを作用させた値を取得。O(log(n))
 
 RMQ and RUQ(Range Minimum Query and Range Update Query)
