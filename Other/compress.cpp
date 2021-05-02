@@ -12,7 +12,7 @@ using namespace std;
     https://atcoder.jp/contests/abc036/tasks/abc036_c
 */
 template <typename T>
-vector<T> compress1d(vector<T> &X) {
+vector<T> compress(vector<T> &X) {
     vector<T> vals = X;
     sort(vals.begin(), vals.end());
     vals.erase(unique(vals.begin(), vals.end()), vals.end());
@@ -26,6 +26,6 @@ int main() {
     int N; cin >> N;
     vector<int> A(N);
     for (int i = 0; i < N; ++i) cin >> A[i];
-    compress1d(A);
+    compress(A);
     for (auto a : A) cout << a << endl;
 }
