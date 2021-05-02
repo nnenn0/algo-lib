@@ -5,6 +5,7 @@
 - [組み合わせ](https://github.com/nnenn0/algo-lib/blob/main/Math/ncr.cpp)
 - [順列](https://github.com/nnenn0/algo-lib/blob/main/Math/npr.cpp)
 - [約数列挙](https://github.com/nnenn0/algo-lib/blob/main/Math/divisor.cpp)
+- [約数個数](https://github.com/nnenn0/algo-lib/blob/main/Math/divisor_count.cpp)
 - [約数個数配列](https://github.com/nnenn0/algo-lib/blob/main/Math/divisor_quantity_array.cpp)
 - [素因数分解](https://github.com/nnenn0/algo-lib/blob/main/Math/prime_factorize.cpp)
 - [高速素因数分解](https://github.com/nnenn0/algo-lib/blob/main/Math/osa_k.cpp)
