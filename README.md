@@ -15,6 +15,9 @@
 - [modint](https://github.com/nnenn0/algo-lib/blob/main/Math/modint.cpp)
 - [nCk](https://github.com/nnenn0/algo-lib/blob/main/Math/nck.cpp)
 
+## Geometry
+- [二次元平面上にある点の回転](https://github.com/nnenn0/algo-lib/blob/main/Geometry/rotate.cpp)
+
 ## Graph
 - [DFS](https://github.com/nnenn0/algo-lib/blob/main/Graph/dfs.cpp)
 - [ダイクストラ法](https://github.com/nnenn0/algo-lib/blob/main/Graph/dijkstra.cpp)
