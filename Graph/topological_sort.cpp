@@ -9,41 +9,43 @@ using namespace std;
     閉路の無い有効グラフ(DAG)についてソートを行う。
     戻り値のvectorのサイズが等しくなければ閉路が存在する。
 
-    example: Topological Sort
-    https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_4_B&lang=ja
+    example: Longest Path
+    https://atcoder.jp/contests/dp/tasks/dp_g
 */
 
-struct Edge {
-    int to;
-};
-using Graph = vector<vector<Edge>>;
+using Graph = vector<vector<int>>;
 
 vector<int> topological_sort(const Graph& G) {
     vector<int> ret;
     int n = int(G.size());
     vector<int> deg(n);
-    for (int i = 0; i < n; ++i) for (auto& e : G[i]) deg.at(e.to)++;
+    for (int v = 0; v < n; ++v) for (auto& nv : G[v]) deg.at(nv)++;
     queue<int> que;
     for (int i = 0; i < n; ++i) if (deg[i] == 0) que.push(i);
     while (!que.empty()) {
         int now = que.front();
         que.pop();
         ret.push_back(now);
-        for (auto& e : G[now]) {
-            deg.at(e.to)--;
-            if (deg.at(e.to) == 0) que.push(e.to);
+        for (auto& nv : G[now]) {
+            deg.at(nv)--;
+            if (deg.at(nv) == 0) que.push(nv);
         }
     }
     return ret;
 }
 
 int main() {
-    int V, E; cin >> V >> E;
-    Graph G(V);
-    for (int i = 0; i < E; ++i) {
-        int s, t; cin >> s >> t;
-        G[s].push_back({t});
+    int N, M; cin >> N >> M;
+    Graph G(N);
+    for (int i = 0; i < M; ++i) {
+        int x, y; cin >> x >> y;
+        x--; y--;
+        G[x].emplace_back(y);
     }
-    auto res = topological_sort(G);
-    for (auto& r : res) cout << r << endl;
+    auto order = topological_sort(G);
+    vector<int> dp(N, 0);
+    for (auto& v : order) for (auto& nv : G[v]) dp[nv] = dp[v] + 1;
+    int res = 0;
+    for (int i = 0; i < N; ++i) res = max(res, dp[i]);
+    cout << res << endl;
 }
