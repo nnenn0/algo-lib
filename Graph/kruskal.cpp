@@ -4,6 +4,13 @@
 
 using namespace std;
 
+/*
+    クラスカル法　O(|E|log|V|)
+    最小全域木の重みの総和を求める。
+    example: Minimum Spanning Tree
+    http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_2_A&lang=ja
+*/
+
 struct UnionFind {
     vector<int> size, parents;
     UnionFind() {}
@@ -46,12 +53,6 @@ struct Edge {
     long long cost;
 };
 
-/*
-    クラスカル法　O(|E|log|V|)
-    最小全域木の重みの総和を求める。
-    example: Minimum Spanning Tree
-    http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_2_A&lang=ja
-*/
 struct Kruskal {
     UnionFind uf;
     long long sum;  
@@ -59,12 +60,10 @@ struct Kruskal {
     int V;
     Kruskal(const vector<Edge> &edges_, int V_) : edges(edges_), V(V_) { init(); }
     void init() {
-        // 辺の重みでソート
         sort(edges.begin(), edges.end(), [](Edge& e1, Edge& e2){ return e1.cost < e2.cost; });
         uf = UnionFind(V);
         sum = 0;
         for (auto e : edges) {
-            // 閉路にならなければ加える
             if (!uf.is_same(e.u, e.v)) {
                 uf.unite(e.u, e.v);
                 sum += e.cost;
@@ -78,8 +77,7 @@ int main() {
     vector<Edge> edges(E);
     for (int i = 0; i < E; ++i) {
         long long s, t, w; cin >> s >> t >> w;
-        Edge e = {s, t, w};
-        edges.at(i) = e;
+        edges.at(i) = {s, t, w};
     }
     Kruskal krs(edges, V);
     cout << krs.sum << endl;
