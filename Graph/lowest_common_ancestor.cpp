@@ -66,6 +66,9 @@ struct LCA {
     int get_dist(int u, int v) {
         return dist[u] + dist[v] - 2 * dist[query(u, v)];
     }
+    int get_dist(int u, int v, int w) {
+        return (get_dist(u, v) + get_dist(v, w) + get_dist(w, u)) / 2;
+    }
     bool is_on_path(int u, int v, int a) {
         return get_dist(u, a) + get_dist(a, v) == get_dist(u, v);
     }
