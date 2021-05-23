@@ -2,7 +2,7 @@
 #include <vector>
 
 /*
-区間加算(RAQ)BIT
+区間加算(RAQ)対応BIT
 BIT<T, I> T: 整数型, I: 0 = 0-indexed, 1 = 1-indexed
 BIT(n): サイズnの初期化。
 add(i, x): a[i]に対してxを加算
