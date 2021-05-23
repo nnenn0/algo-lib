@@ -30,13 +30,12 @@ long long nCk(long long n, long long k) {
 
 int main() {
     int a, b; long long k; cin >> a >> b >> k;
-    k--;
     init_nCk();
     string res;
     int n = a + b;
     for (int i = 0; i < n; ++i) {
         if (0 < a) {
-            if (k < nCk(a+b-1, b)) {
+            if (k <= nCk(a+b-1, b)) {
                 res += 'a';
                 --a;
             } else {
