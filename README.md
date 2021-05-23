@@ -13,7 +13,7 @@
 - [エラトステネスの篩](https://github.com/nnenn0/algo-lib/blob/main/Math/eratosthenes.cpp)
 - [modpow](https://github.com/nnenn0/algo-lib/blob/main/Math/modpow.cpp)
 - [modint](https://github.com/nnenn0/algo-lib/blob/main/Math/modint.cpp)
-- [nCk](https://github.com/nnenn0/algo-lib/blob/main/Math/nck.cpp)
+- [二項係数(MOD)](https://github.com/nnenn0/algo-lib/blob/main/Math/nck_mod.cpp)
 
 ## Geometry
 - [二次元平面上にある点の回転](https://github.com/nnenn0/algo-lib/blob/main/Geometry/rotate.cpp)
