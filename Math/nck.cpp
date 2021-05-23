@@ -28,24 +28,21 @@ long long nCk(long long n, long long k) {
     return memo[n][k] = nCk(n-1, k-1) + nCk(n-1, k);
 }
 
+
 int main() {
     int a, b; long long k; cin >> a >> b >> k;
     init_nCk();
     string res;
-    int n = a + b;
-    for (int i = 0; i < n; ++i) {
-        if (0 < a) {
-            if (k <= nCk(a+b-1, b)) {
-                res += 'a';
-                --a;
-            } else {
-                res += 'b';
-                k -= nCk(a+b-1, b);
-                b--;
-            }
+    while (a+b > 0) {
+        long long x = 0;
+        if (a >= 1) x = nCk(a+b-1, a-1);
+        if (k <= x) {
+            res += 'a';
+            --a;
         } else {
             res += 'b';
             --b;
+            k -= x;
         }
     }
     cout << res << endl;
