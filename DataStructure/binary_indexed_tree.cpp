@@ -2,18 +2,20 @@
 #include <vector>
 
 /*
+区間加算(RAQ)BIT
+BIT<T, I> T: 整数型, I: 0 = 0-indexed, 1 = 1-indexed
 BIT(n): サイズnの初期化。
+add(i, x): a[i]に対してxを加算
 add(l, r, x): 区間[l,r) に対してxを加算
 sum(i): 区間[0, i)の合計を取得
 query(l, r): 区間[l, r)の合計を取得
-lower_bound(w): a[1]+a[2]+...a[x] >= wとなる最小のxを取得
 
 RSQ(Range Sum Query)
 example: Range Sum Query(RSQ)
 http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B&lang=jp
 */
 
-template <typename T>
+template <typename T, int I = 1>
 struct BIT {
     int n;
     std::vector<T> bit[2]; 
@@ -27,11 +29,15 @@ struct BIT {
             bit[p][idx] += x;
         }
     }
-    void add(int l, int r, T x) {  // [l,r) に加算
+    void add(int l, int r, T x) {
+        if (I == 0) ++l, ++r;
         add_sub(0, l, -x * (l - 1));
         add_sub(0, r, x * (r - 1));
         add_sub(1, l, x);
         add_sub(1, r, -x);
+    }
+    void add(int i, T x) {
+        add(i, i+1, x);
     }
     T sum_sub(int p, int i) {
         T s(0);
@@ -41,27 +47,30 @@ struct BIT {
         return s;
     }
     T sum(int i) { return sum_sub(0, i) + sum_sub(1, i) * i; }
-    T query(int l, int r) { return sum(r - 1) - sum(l - 1); }
-    int lower_bound(T w) {
-        if (w <= 0) {
-            return 0;
-        } else {
-            int x = 0, r = 1;
-            while (r < n) r = r << 1;
-            for (int len = r; len > 0; len = len >> 1) {
-                if (x + len < n && bit[x + len] < w) {
-                    w -= bit[x + len];
-                    x += len;
-                }
-            }
-            return x + 1;
-        }
+    T query(int l, int r) { 
+        if (I == 0) ++l, ++r;
+        return sum(r - 1) - sum(l - 1);
     }
 };
 
 int main() {
     using namespace std;
     int n, q; cin >> n >> q;
+    /*
+    // 0-indexed
+    BIT<int, 0> bit(n);
+    for (int i = 0; i < q; ++i) {
+        int com, x, y; cin >> com >> x >> y;
+        --x;
+        if (com == 0) {
+            bit.add(x, y);
+        } else {
+            --y;
+            cout << bit.query(x, y+1) << endl;
+        }
+    }
+    */
+    // 1-indexed
     BIT<int> bit(n);
     for (int i = 0; i < q; ++i) {
         int com, x, y; cin >> com >> x >> y;
