@@ -10,9 +10,8 @@ sum(i): 区間[0, i)の合計を取得
 query(l, r): 区間[l, r)の合計を取得
 lower_bound(w): 要素a_1 + a_2 + ... + a_x >= w となるような最小の x を求める
 
-RSQ(Range Sum Query)
-example: Range Sum Query(RSQ)
-http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B&lang=jp
+example: ARC033 C データ構造
+https://atcoder.jp/contests/arc033/tasks/arc033_3
 */
 
 using namespace std;
