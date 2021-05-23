@@ -38,7 +38,7 @@
 - [Union-Find](https://github.com/nnenn0/algo-lib/blob/main/DataStructure/union_find.cpp)
 - [SegmentTree](https://github.com/nnenn0/algo-lib/blob/main/DataStructure/segment_tree.cpp)
 - [SegmentTreeLazy](https://github.com/nnenn0/algo-lib/blob/main/DataStructure/segment_tree_lazy.cpp)
-- [BinaryIndexedTree(BIT)](https://github.com/nnenn0/algo-lib/blob/main/DataStructure/binary_indexed_tree.cpp)
+- [BinaryIndexedTree(RAQ)](https://github.com/nnenn0/algo-lib/blob/main/DataStructure/binary_indexed_tree_raq.cpp)
 
 ## String
 - [ランレングス圧縮/復元](https://github.com/nnenn0/algo-lib/blob/main/String/run_length_encoding.cpp)
