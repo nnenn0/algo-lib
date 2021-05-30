@@ -30,7 +30,7 @@
 - [ワーシャルフロイド法](https://github.com/nnenn0/algo-lib/blob/main/Graph/warshall_floyd.cpp)
 - [クラスカル法](https://github.com/nnenn0/algo-lib/blob/main/Graph/kruskal.cpp)
 - [プリム法](https://github.com/nnenn0/algo-lib/blob/main/Graph/prim.cpp)
-- [LowLink](https://github.com/nnenn0/algo-lib/blob/main/Graph/low-link.cpp)
+- [LowLink](https://github.com/nnenn0/algo-lib/blob/main/Graph/low_link.cpp)
 - [強連結成分分解](https://github.com/nnenn0/algo-lib/blob/main/Graph/strongly_connected_components.cpp)
 - [最大フロー](https://github.com/nnenn0/algo-lib/blob/main/Graph/ford_fullkerson.cpp)
 
