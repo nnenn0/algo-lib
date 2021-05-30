@@ -13,7 +13,7 @@ using namespace std;
     https://atcoder.jp/contests/abc019/tasks/abc019_2
 */
 
-vector<pair<char, int>> rle_encode(const string& str) {
+vector<pair<char, int>> run_length_encode(const string& str) {
     int n = int(str.size());
     vector<pair<char, int>> ret;
     for (int l = 0; l < n;) {
@@ -25,7 +25,7 @@ vector<pair<char, int>> rle_encode(const string& str) {
     return ret;
 }
 
-string rle_decode(const vector<pair<char, int>>& code) {
+string run_length_decode(const vector<pair<char, int>>& code) {
     string ret = "";
     for (auto p : code) {
         for (int i = 0; i < p.second; ++i) ret.push_back(p.first);
@@ -35,7 +35,7 @@ string rle_decode(const vector<pair<char, int>>& code) {
 
 int main() {
     string s; cin >> s;
-    auto res = rle_encode(s);
+    auto res = run_length_encode(s);
     for(auto v : res) cout << v.first << v.second;
     cout << endl;
 }
