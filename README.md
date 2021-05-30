@@ -42,7 +42,7 @@
 - [BinaryIndexedTree(RAQ)](https://github.com/nnenn0/algo-lib/blob/main/DataStructure/binary_indexed_tree_raq.cpp)
 
 ## String
-- [ランレングス圧縮/復元](https://github.com/nnenn0/algo-lib/blob/main/String/run_length_encoding.cpp)
+- [ランレングス圧縮/復元](https://github.com/nnenn0/algo-lib/blob/main/String/run_length_encode.cpp)
 - [トライ木](https://github.com/nnenn0/algo-lib/blob/main/String/trie_tree.cpp)
 
 ## Other
