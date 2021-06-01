@@ -47,6 +47,7 @@
 
 ## DP
 - [累積和(2D)](https://github.com/nnenn0/algo-lib/blob/main/DP/cumulative_sum_2d.cpp)
+- [全方位DP](https://github.com/nnenn0/algo-lib/blob/main/DP/rerooting.cpp)
 
 ## Other
 - [座標圧縮](https://github.com/nnenn0/algo-lib/blob/main/Other/compress.cpp)
