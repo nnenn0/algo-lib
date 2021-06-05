@@ -57,3 +57,4 @@
 - [周期](https://github.com/nnenn0/algo-lib/blob/main/Other/cycle.cpp)
 - [ダブリング](https://github.com/nnenn0/algo-lib/blob/main/Other/doubling.cpp)
 - [半分全列挙](https://github.com/nnenn0/algo-lib/blob/main/Other/meet_in_the_middle.cpp)
+- [しゃくとり法](https://github.com/nnenn0/algo-lib/blob/main/Other/two_pointers.cpp)
