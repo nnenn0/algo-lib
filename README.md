@@ -48,6 +48,7 @@
 ## DP
 - [累積和(2D)](https://github.com/nnenn0/algo-lib/blob/main/DP/cumulative_sum_2d.cpp)
 - [全方位DP](https://github.com/nnenn0/algo-lib/blob/main/DP/rerooting.cpp)
+- [LCS](https://github.com/nnenn0/algo-lib/blob/main/DP/longest_common_subsequence.cpp)
 - [LIS](https://github.com/nnenn0/algo-lib/blob/main/DP/longest_increasing_subsequence.cpp)
 
 ## Other
