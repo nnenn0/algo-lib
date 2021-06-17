@@ -36,6 +36,7 @@
 
 ## DataStructure
 - [Union-Find](https://github.com/nnenn0/algo-lib/blob/main/DataStructure/union_find.cpp)
+- [Potential-Union-Find](https://github.com/nnenn0/algo-lib/blob/main/DataStructure/potential_union_find.cpp)
 - [SegmentTree](https://github.com/nnenn0/algo-lib/blob/main/DataStructure/segment_tree.cpp)
 - [SegmentTreeLazy](https://github.com/nnenn0/algo-lib/blob/main/DataStructure/segment_tree_lazy.cpp)
 - [BinaryIndexedTree](https://github.com/nnenn0/algo-lib/blob/main/DataStructure/binary_indexed_tree.cpp)
