@@ -18,6 +18,7 @@
 
 ## Geometry
 - [二次元平面上にある点の回転](https://github.com/nnenn0/algo-lib/blob/main/Geometry/rotate.cpp)
+- [複素数(整数)](https://github.com/nnenn0/algo-lib/blob/main/Geometry/integer_complex.cpp)
 
 ## Graph
 - [DFS](https://github.com/nnenn0/algo-lib/blob/main/Graph/dfs.cpp)
