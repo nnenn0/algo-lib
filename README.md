@@ -54,6 +54,9 @@
 - [LCS](https://github.com/nnenn0/algo-lib/blob/main/DP/longest_common_subsequence.cpp)
 - [LIS](https://github.com/nnenn0/algo-lib/blob/main/DP/longest_increasing_subsequence.cpp)
 
+## Game
+- [Grundy数](https://github.com/nnenn0/algo-lib/blob/main/Game/get_grundy.cpp)
+
 ## Other
 - [座標圧縮](https://github.com/nnenn0/algo-lib/blob/main/Other/compress.cpp)
 - [座標圧縮(2D)](https://github.com/nnenn0/algo-lib/blob/main/Other/compress2d.cpp)
