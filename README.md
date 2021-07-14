@@ -67,3 +67,4 @@
 - [ダブリング](https://github.com/nnenn0/algo-lib/blob/main/Other/doubling.cpp)
 - [半分全列挙](https://github.com/nnenn0/algo-lib/blob/main/Other/meet_in_the_middle.cpp)
 - [しゃくとり法](https://github.com/nnenn0/algo-lib/blob/main/Other/two_pointers.cpp)
+- [しゃくとり法(queue)](https://github.com/nnenn0/algo-lib/blob/main/Other/two_pointers_queue.cpp)
