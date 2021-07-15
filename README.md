@@ -47,7 +47,7 @@
 ## String
 - [ランレングス圧縮/復元](https://github.com/nnenn0/algo-lib/blob/main/String/run_length_encode.cpp)
 - [トライ木](https://github.com/nnenn0/algo-lib/blob/main/String/trie_tree.cpp)
-- [z-algorithm](https://github.com/nnenn0/algo-lib/blob/main/String/z_algorithm.cpp)
+- [z-algorithm](https://github.com/nnenn0/algo-lib/blob/main/String/z_algo.cpp)
 - [RollingHash](https://github.com/nnenn0/algo-lib/blob/main/String/rolling_hash.cpp)
 
 ## DP

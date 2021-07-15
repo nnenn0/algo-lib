@@ -7,13 +7,13 @@ using namespace std;
 
 /* 
     Z-algorithm O(N)
-    z_algorithm: 配列lcpを求める
+    z_algo: 配列lcpを求める
     lcp[i]: S自身とS[i:]とが先頭から最大で何文字一致しているかをO(1)で求める
     example: ABC141E Who Says a Pun?
     https://atcoder.jp/contests/abc141/tasks/abc141_e
 */
 
-vector<int> z_algorithm(const string& S) {
+vector<int> z_algo(const string& S) {
     int N = (int)S.size();
     vector<int> res(N);
     res[0] = N;
@@ -39,7 +39,7 @@ int main() {
     int res = 0;
     for (int i = 0; i < n; ++i) {
         string t = s.substr(i);
-        auto lcp = z_algorithm(t);
+        auto lcp = z_algo(t);
         for (int j = 0; j < (int)t.size(); ++j) {
             int l = min(lcp[j], j);
             res = max(res, l);
