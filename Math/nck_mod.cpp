@@ -42,6 +42,10 @@ long long nPk(int n, int k) {
     return nCk(n, k) * fact[k] % MOD;
 }
 
+long long nHk(int n, int k) {
+    return nCk(n + k - 1, k);
+}
+
 long long solve(long long X, long long Y) {
     init_nCk(3000000);
     if ((X + Y) % 3 != 0) return 0;
