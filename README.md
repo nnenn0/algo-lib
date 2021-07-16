@@ -15,6 +15,7 @@
 - [modint](https://github.com/nnenn0/algo-lib/blob/main/Math/modint.cpp)
 - [二項係数](https://github.com/nnenn0/algo-lib/blob/main/Math/nck.cpp)
 - [二項係数(MOD)](https://github.com/nnenn0/algo-lib/blob/main/Math/nck_mod.cpp)
+- [二項係数構造体(MOD)](https://github.com/nnenn0/algo-lib/blob/main/Math/nck_mod2.cpp)
 
 ## Geometry
 - [二次元平面上にある点の回転](https://github.com/nnenn0/algo-lib/blob/main/Geometry/rotate.cpp)
