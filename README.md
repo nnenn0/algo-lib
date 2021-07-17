@@ -18,7 +18,7 @@
 - [二項係数構造体(MOD)](https://github.com/nnenn0/algo-lib/blob/main/Math/nck_mod2.cpp)
 
 ## Geometry
-- [二次元平面上にある点の回転](https://github.com/nnenn0/algo-lib/blob/main/Geometry/rotate.cpp)
+- [二次元平面上にある点の回転](https://github.com/nnenn0/algo-lib/blob/main/Geometry/rotate_point.cpp)
 - [複素数(整数)](https://github.com/nnenn0/algo-lib/blob/main/Geometry/integer_complex.cpp)
 
 ## Graph
