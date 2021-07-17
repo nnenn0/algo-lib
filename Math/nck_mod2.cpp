@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <cassert>
 
 using namespace std;
 
@@ -36,8 +37,8 @@ struct Comb {
         assert(!(n < 0 || k < 0));
         return fact_[n] * fact_inv_[k] * fact_inv_[n - k];
     }
-    T nCk(int n, int k) {
-        return nCk(n, k) * fact[k];
+    T nPk(int n, int k) {
+        return nCk(n, k) * fact_[k];
     }
     T nHk(int n, int k) {
         assert(!(n < 0 || k < 0));
