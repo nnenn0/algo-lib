@@ -58,6 +58,7 @@
 - [LCS](https://github.com/nnenn0/algo-lib/blob/main/DP/longest_common_subsequence.cpp)
 - [LIS](https://github.com/nnenn0/algo-lib/blob/main/DP/longest_increasing_subsequence.cpp)
 - [巡回セールスマン問題](https://github.com/nnenn0/algo-lib/blob/main/DP/traveling_salesman.cpp)
+- [グループbitDP](https://github.com/nnenn0/algo-lib/blob/main/DP/group_bit_dp.cpp)
 - [桁DP](https://github.com/nnenn0/algo-lib/blob/main/DP/digit_dp.cpp)
 
 ## Game
