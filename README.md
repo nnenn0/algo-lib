@@ -63,6 +63,7 @@
 
 ## Game
 - [Grundy数](https://github.com/nnenn0/algo-lib/blob/main/Game/get_grundy.cpp)
+- [後退解析](https://github.com/nnenn0/algo-lib/blob/main/Game/retrograde_analysis.cpp)
 
 ## Other
 - [座標圧縮](https://github.com/nnenn0/algo-lib/blob/main/Other/compress.cpp)
