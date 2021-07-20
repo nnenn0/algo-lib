@@ -33,8 +33,7 @@ struct Comb {
         }
     }
     T nCk(int n, int k) {
-        assert(!(n < k));
-        assert(!(n < 0 || k < 0));
+        if (n < k || n < 0 || k < 0) return 0;
         return fact_[n] * fact_inv_[k] * fact_inv_[n - k];
     }
     T nPk(int n, int k) {
