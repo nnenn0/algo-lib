@@ -12,14 +12,14 @@ n以下の素数を全て列挙する。
 */
 
 vector<int> eratosthenes(int n) {
-    vector<bool> is_prime(n, true);
+    vector<bool> is_prime(n+1, true);
     vector<int> res;
     is_prime.at(0) = false;
     is_prime.at(1) = false;
-    for (int i = 2; i < n; ++i) {
+    for (int i = 2; i <= n; ++i) {
         if (is_prime.at(i)) {
             res.push_back(i);
-            for (int j = i*2; j < n; j+=i) is_prime[j] = false;
+            for (int j = i*2; j <= n; j+=i) is_prime[j] = false;
         }
     }
     return res;
