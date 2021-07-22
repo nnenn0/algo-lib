@@ -56,7 +56,6 @@
 - [SuffixArray](https://github.com/nnenn0/algo-lib/blob/main/String/suffix_array.cpp)
 
 ## DP
-- [累積和(2D)](https://github.com/nnenn0/algo-lib/blob/main/DP/cumulative_sum_2d.cpp)
 - [全方位DP](https://github.com/nnenn0/algo-lib/blob/main/DP/rerooting.cpp)
 - [LCS](https://github.com/nnenn0/algo-lib/blob/main/DP/longest_common_subsequence.cpp)
 - [LIS](https://github.com/nnenn0/algo-lib/blob/main/DP/longest_increasing_subsequence.cpp)
@@ -69,6 +68,7 @@
 - [後退解析](https://github.com/nnenn0/algo-lib/blob/main/Game/retrograde_analysis.cpp)
 
 ## Other
+- [累積和(2D)](https://github.com/nnenn0/algo-lib/blob/main/DP/cumulative_sum_2d.cpp)
 - [座標圧縮](https://github.com/nnenn0/algo-lib/blob/main/Other/compress.cpp)
 - [座標圧縮(2D)](https://github.com/nnenn0/algo-lib/blob/main/Other/compress2d.cpp)
 - [境界線の二分探索(整数)](https://github.com/nnenn0/algo-lib/blob/main/Other/binary_check_integer.cpp)

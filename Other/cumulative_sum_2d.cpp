@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <cassert>
 
 using namespace std;
 
@@ -16,10 +17,12 @@ template<typename T>
 struct CumulativeSum2D {
     vector<vector<T>> v;
     int vh, vw;
+    bool need_build;
     CumulativeSum2D(int h, int w) {
         init(h, w);
     }
     void init(int h, int w) {
+        need_build = true;
         vh = h, vw = w;
         v = vector<vector<T>>(h, vector<T>(w, 0));
     }
@@ -30,6 +33,7 @@ struct CumulativeSum2D {
         v[y][x] += c;
     }
     void build() {
+        need_build = false;
         for (int y = 0; y < vh; ++y) {
             for (int x = 0; x < vw; ++x) {
                 if (0 < y) v[y][x] += v[y-1][x];
@@ -39,6 +43,7 @@ struct CumulativeSum2D {
         }
     }
     T get(int sy, int ty, int sx, int tx) {
+        if (need_build) assert(0 && "Need Build");
         if (tx < sx || ty < sy) return 0;
         T ret = v[ty][tx];
         if (0 < sx) ret -= v[ty][sx-1];
