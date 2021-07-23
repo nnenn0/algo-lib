@@ -65,7 +65,7 @@
 
 ## Game
 - [バックトラック](https://github.com/nnenn0/algo-lib/blob/main/Game/back_track.cpp)
-- [Grundy数](https://github.com/nnenn0/algo-lib/blob/main/Game/get_grundy.cpp)
+- [Grundy数](https://github.com/nnenn0/algo-lib/blob/main/Game/grundy_number.cpp)
 - [後退解析](https://github.com/nnenn0/algo-lib/blob/main/Game/retrograde_analysis.cpp)
 
 ## Other
