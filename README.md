@@ -64,6 +64,7 @@
 - [桁DP](https://github.com/nnenn0/algo-lib/blob/main/DP/digit_dp.cpp)
 
 ## Game
+- [バックトラック](https://github.com/nnenn0/algo-lib/blob/main/Game/back_track.cpp)
 - [Grundy数](https://github.com/nnenn0/algo-lib/blob/main/Game/get_grundy.cpp)
 - [後退解析](https://github.com/nnenn0/algo-lib/blob/main/Game/retrograde_analysis.cpp)
 
