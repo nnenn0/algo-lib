@@ -3,14 +3,6 @@
 
 using namespace std;
 
-struct Edge {
-    long long from;
-    long long to;
-    long long cost;
-};
-using Edges = vector<Edge>;
-constexpr long long INF = 1LL << 60;
-
 /*
     ベルマンフォード法　O(|E||V|)
     始点からの最短コストを求める。
@@ -18,6 +10,14 @@ constexpr long long INF = 1LL << 60;
     example: Single Source Shortest Path (Negative Edges)
     http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B&lang=ja
 */
+
+struct Edge {
+    long long from;
+    long long to;
+    long long cost;
+};
+using Edges = vector<Edge>;
+constexpr long long INF = 1LL << 60;
 
 bool bellman_ford(const Edges& Es, int V, int s, vector<long long>& dist) {
     dist.resize(V, INF);
