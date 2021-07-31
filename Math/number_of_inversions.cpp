@@ -5,6 +5,8 @@
     転倒数(NlogN)
     自然な順番になっていないペアの数。
     バブルソートでのスワップ回数と同じである。
+    example: Chokudai SpeedRun 001J 転倒数
+    https://atcoder.jp/contests/chokudai_S001/tasks/chokudai_S001_j
 */
 
 using namespace std;
