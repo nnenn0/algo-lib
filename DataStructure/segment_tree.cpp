@@ -37,6 +37,7 @@ struct SegmentTree {
 
     const F f;
     const Monoid M1;
+    bool need_build;
 
     SegmentTree(int n, const F f, const Monoid &M1) : f(f), M1(M1) {
         sz = 1;
@@ -45,10 +46,12 @@ struct SegmentTree {
     }
 
     void set(int k, const Monoid &x) {
+        need_build = true;
         seg[k + sz] = x;
     }
 
     void build() {
+        need_build = false;
         for(int k = sz - 1; k > 0; k--) {
           seg[k] = f(seg[2 * k + 0], seg[2 * k + 1]);
         }
@@ -63,6 +66,7 @@ struct SegmentTree {
     }
 
     Monoid query(int a, int b) {
+        if (need_build) assert(0 && "Need Build");
         Monoid L = M1, R = M1;
         for(a += sz, b += sz; a < b; a >>= 1, b >>= 1) {
         if(a & 1) L = f(L, seg[a++]);
