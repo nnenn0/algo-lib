@@ -84,3 +84,4 @@
 - [しゃくとり法](https://github.com/nnenn0/algo-lib/blob/main/Other/two_pointers.cpp)
 - [しゃくとり法(queue)](https://github.com/nnenn0/algo-lib/blob/main/Other/two_pointers_queue.cpp)
 - [区間スケジューリング問題](https://github.com/nnenn0/algo-lib/blob/main/Other/interval_scheduling.cpp)
+- [n進数変換](https://github.com/nnenn0/algo-lib/blob/main/Other/n_base_convert.cpp)
