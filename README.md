@@ -11,6 +11,7 @@
 - [高速素因数分解](https://github.com/nnenn0/algo-lib/blob/main/Math/osa_k.cpp)
 - [素数判定](https://github.com/nnenn0/algo-lib/blob/main/Math/is_prime.cpp)
 - [エラトステネスの篩](https://github.com/nnenn0/algo-lib/blob/main/Math/eratosthenes.cpp)
+- [等差数列の和](https://github.com/nnenn0/algo-lib/blob/main/Math/arithmetic_progression_sum.cpp)
 - [拡張ユークリッドの互除法](https://github.com/nnenn0/algo-lib/blob/main/Math/ext_gcd.cpp)
 - [modpow](https://github.com/nnenn0/algo-lib/blob/main/Math/modpow.cpp)
 - [modint](https://github.com/nnenn0/algo-lib/blob/main/Math/modint.cpp)
