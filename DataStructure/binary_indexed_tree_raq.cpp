@@ -2,8 +2,8 @@
 #include <vector>
 
 /*
-区間加算(RAQ)対応BIT
-BIT<T, I> T: 整数型, I: 0 = 0-indexed, 1 = 1-indexed
+区間加算(RAQ)対応BIT(1-indexed)
+BIT<T> T: 整数型
 BIT(n): サイズnの初期化。
 add(i, x): a[i]に対してxを加算
 add(l, r, x): 区間[l,r) に対してxを加算
@@ -15,7 +15,7 @@ example: Range Sum Query(RSQ)
 http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B&lang=jp
 */
 
-template <typename T, int I = 1>
+template <typename T>
 struct BIT {
     int n;
     std::vector<T> bit[2]; 
@@ -30,7 +30,6 @@ struct BIT {
         }
     }
     void add(int l, int r, T x) {
-        if (I == 0) ++l, ++r;
         add_sub(0, l, -x * (l - 1));
         add_sub(0, r, x * (r - 1));
         add_sub(1, l, x);
@@ -48,7 +47,6 @@ struct BIT {
     }
     T sum(int i) { return sum_sub(0, i) + sum_sub(1, i) * i; }
     T query(int l, int r) { 
-        if (I == 0) ++l, ++r;
         return sum(r - 1) - sum(l - 1);
     }
 };
@@ -56,21 +54,6 @@ struct BIT {
 int main() {
     using namespace std;
     int n, q; cin >> n >> q;
-    /*
-    // 0-indexed
-    BIT<int, 0> bit(n);
-    for (int i = 0; i < q; ++i) {
-        int com, x, y; cin >> com >> x >> y;
-        --x;
-        if (com == 0) {
-            bit.add(x, y);
-        } else {
-            --y;
-            cout << bit.query(x, y+1) << endl;
-        }
-    }
-    */
-    // 1-indexed
     BIT<int> bit(n);
     for (int i = 0; i < q; ++i) {
         int com, x, y; cin >> com >> x >> y;
