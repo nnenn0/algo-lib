@@ -2,8 +2,8 @@
 #include <vector>
 
 /*
-1点加算BIT
-BIT<T, I> T: 整数型, I: 0 = 0-indexed, 1 = 1-indexed
+1点加算BIT (1-indexed)
+BIT<T, I> T: 整数型
 BIT(n): サイズnの初期化。
 add(i, x): a[i]に対してxを加算
 sum(i): 区間[0, i)の合計を取得
@@ -16,19 +16,17 @@ https://atcoder.jp/contests/arc033/tasks/arc033_3
 
 using namespace std;
 
-template <typename T, int I = 1>
+template <typename T>
 struct BIT {
     int n;
     vector<T> bit;
     BIT(int n_) : n(n_ + 1), bit(n, 0) {}
     void add(int i, T x) {
-        if (I == 0) ++i;
         for (int idx = i; idx < n; idx += (idx & -idx)) {
             bit[idx] += x;
         }
     }
     T sum(int i) {
-        if (I == 0) ++i;
         T s(0);
         for (int idx = i; idx > 0; idx -= (idx & -idx)) {
             s += bit[idx];
@@ -36,7 +34,6 @@ struct BIT {
         return s;
     }
     T query(int l, int r) {
-        if (I == 0) ++l, ++r;
         return sum(r - 1) - sum(l - 1);
     }
     int lower_bound(T w) {
@@ -51,7 +48,6 @@ struct BIT {
                     x += len;
                 }
             }
-            if (I == 0) return x;
             return x + 1;
         }
     }
