@@ -32,7 +32,7 @@
 - [Euler Tour](https://github.com/nnenn0/algo-lib/blob/main/Graph/euler_tour.cpp)
 - [最短経路数え上げ](https://github.com/nnenn0/algo-lib/blob/main/Graph/shortest_path_count.cpp)
 - [木の直径](https://github.com/nnenn0/algo-lib/blob/main/Graph/tree_diamiter.cpp)
-- [Lowest Common Ancestor](https://github.com/nnenn0/algo-lib/blob/main/Graph/lowest_common_ancestor.cpp)
+- [LCA](https://github.com/nnenn0/algo-lib/blob/main/Graph/lowest_common_ancestor.cpp)
 - [トポロジカルソート](https://github.com/nnenn0/algo-lib/blob/main/Graph/topological_sort.cpp)
 - [ダイクストラ法](https://github.com/nnenn0/algo-lib/blob/main/Graph/dijkstra.cpp)
 - [ダイクストラ法(2D)](https://github.com/nnenn0/algo-lib/blob/main/Graph/dijkstra2D.cpp)
