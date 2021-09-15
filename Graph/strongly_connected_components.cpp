@@ -9,6 +9,8 @@ constexpr long long INF = 1LL << 60;
 /*
     強連結成分分解　O(N+M)
     強連結成分に分解する。
+    group[v]: 頂点(v)はgroup[v]に属している
+    is_same(u, v): 頂点(u, v)が同じ強連結成分に含まれるか
     example: Strongly Connected Components
     https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C&lang=jp
 */
@@ -45,6 +47,9 @@ struct SCC {
         group.at(v) = cnt;
         for (auto& nv : RG.at(v)) if (!rused[nv]) second_dfs(RG, nv);
     }
+    bool is_same(int u, int v) {
+        return group[u] == group[v];
+    }
 };
 
 int main() {
@@ -59,7 +64,7 @@ int main() {
     int Q; cin >> Q;
     while (Q--) {
         int u, v; cin >> u >> v;
-        if (scc.group[u] == scc.group[v]) cout << 1 << endl;
+        if (scc.is_same(u, v)) cout << 1 << endl;
         else cout << 0 << endl;
     }
 }
