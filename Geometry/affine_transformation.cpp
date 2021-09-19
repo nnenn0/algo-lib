@@ -16,25 +16,25 @@ using namespace std;
 using ll = long long;
 using pll = pair<ll, ll>;
 
-struct Matrix {
+struct AffineTransformation {
     vector<vector<ll>> matrix;
-    Matrix() {
+    AffineTransformation() {
         matrix = vector<vector<ll>> {
             {1, 0, 0},
             {0, 1, 0},
             {0, 0, 1}
         };
     }
-    Matrix(vector<vector<ll>> m) {
+    AffineTransformation(vector<vector<ll>> m) {
         matrix = m;
     }
     vector<vector<ll>> get() {
         return matrix;
     }
-    Matrix calc(Matrix a) {
+    AffineTransformation calc(AffineTransformation a) {
         return calc(a.get());
     }
-    Matrix calc(vector<vector<ll>> a) {
+    AffineTransformation calc(vector<vector<ll>> a) {
         vector<vector<ll>> cal(3, vector<ll>(3, 0));
         for (int i = 0; i < 3; ++i) {
             for (int j = 0; j < 3; ++j) {
@@ -43,9 +43,9 @@ struct Matrix {
                 }
             }
         }
-        return Matrix(cal);
+        return AffineTransformation(cal);
     }
-    Matrix clockwise() {
+    AffineTransformation clockwise() {
         vector<vector<ll>> a {
             {0, 1, 0},
             {-1, 0, 0},
@@ -53,7 +53,7 @@ struct Matrix {
         };
         return calc(a);
     }
-    Matrix counter_clockwise() {
+    AffineTransformation counter_clockwise() {
         vector<vector<ll>> a {
             {0, -1, 0},
             {1, 0, 0},
@@ -61,7 +61,7 @@ struct Matrix {
         };
         return calc(a);
     }
-    Matrix symmetric_x(ll p) {
+    AffineTransformation symmetric_x(ll p) {
         vector<vector<ll>> a {
             {-1, 0, 2*p},
             {0, 1, 0},
@@ -69,7 +69,7 @@ struct Matrix {
         };
         return calc(a);
     }
-    Matrix symmetric_y(ll p) {
+    AffineTransformation symmetric_y(ll p) {
         vector<vector<ll>> a {
             {1, 0, 0},
             {0, -1, 2*p},
@@ -87,7 +87,7 @@ int main() {
         points[i] = {x, y};
     }
     int M; cin >> M;
-    vector<Matrix> states(M+1);
+    vector<AffineTransformation> states(M+1);
     for (int i = 1; i <= M; ++i)  {
         int op; cin >> op;
         if (op == 1) states[i] = states[i-1].clockwise();
@@ -109,7 +109,7 @@ int main() {
             {points[b].second, 0, 0},
             {1, 0, 0}
         };
-        Matrix matrix(m);
+        AffineTransformation matrix(m);
         auto res = matrix.calc(states[a]).get();
         cout << res[0][0] << " " << res[1][0] << endl;
     }
