@@ -14,7 +14,7 @@ using namespace std;
     add_root: まとめたDPから新たな部分木のDPを計算する
 
     // 最大の長さを求める場合
-        struct DP {
+    struct DP {
         long long dp;
         DP(long long dp_) : dp(dp_) {}
     };
