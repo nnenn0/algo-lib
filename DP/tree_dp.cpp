@@ -58,16 +58,15 @@ struct TreeDP {
 
 int main() {
     int N; cin >> N;
-    TreeDP tree(N);
+    TreeDP tree_dp(N);
     for (int i = 0; i < N-1; ++i) {
         int u, v; cin >> u >> v;
         --u; --v;
-        tree.add_edge(u, v);
-        tree.add_edge(v, u);
+        tree_dp.add_edge(u, v);
+        tree_dp.add_edge(v, u);
     }
     for (int v = 0; v < N; ++v)  {
-        TreeDP res = tree;
-        res.build(v);
-        cout << res.dp[v].dp << '\n';
+        tree_dp.build(v);
+        cout << tree_dp.dp[v].dp << '\n';
     }
 }
