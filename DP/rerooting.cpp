@@ -5,12 +5,12 @@
 using namespace std;
 
 /*
-    全方位DP O(N)
+    全方位木DP O(N)
     各頂点について木DPを行う。
 
     settingによって抽象化している。
     identity: 単位元
-    merge: 型DPに対する二校演算
+    merge: 型DPに対する二項演算
     add_root: まとめたDPから新たな部分木のDPを計算する
 
     // 最大の長さを求める場合
