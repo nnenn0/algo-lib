@@ -10,7 +10,7 @@ using namespace std;
 
     settingによって抽象化している。
     identity: 単位元
-    merge: 型DPに対する二校演算
+    merge: 型DPに対する二項演算
     add_root: まとめたDPから新たな部分木のDPを計算する
 */
 
