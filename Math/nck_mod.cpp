@@ -7,6 +7,9 @@ using namespace std;
     二項係数のための前処理
     init_nCk
     計算量:O(n)
+    fact[i]: iの階乗のmod
+    fact_inv[i]: iの階乗の逆数のmod
+    inv[i]: iの逆数のmod
 */
 /* 
     MODでの二項係数を求める
