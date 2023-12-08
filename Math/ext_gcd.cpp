@@ -12,31 +12,33 @@ using namespace std;
 */
 
 long long ext_gcd(long long a, long long b, long long& x, long long& y) {
-    if (b == 0) {
-        x = 1;
-        y = 0;
-        return a;
-    }
-    long long d = ext_gcd(b, a%b, y, x);
-    y -= a/b * x;
-    return d;
+  if (b == 0) {
+    x = 1;
+    y = 0;
+    return a;
+  }
+  long long d = ext_gcd(b, a % b, y, x);
+  y -= a / b * x;
+  return d;
 }
 
 long long solve() {
-    long long N, S, K; cin >> N >> S >> K;
-    long long g = gcd(N, K);
-    if (S % g) return -1;
-    N /= g, S /= g, K /= g;
-    long long x, y;
-    ext_gcd(K, N, x, y);
-    if (x > 0) {
-        x = x - (-x/N+1) * N;
-    }
-    x = -x * S;
-    return x % N;
+  long long N, S, K;
+  cin >> N >> S >> K;
+  long long g = gcd(N, K);
+  if (S % g) return -1;
+  N /= g, S /= g, K /= g;
+  long long x, y;
+  ext_gcd(K, N, x, y);
+  if (x > 0) {
+    x = x - (-x / N + 1) * N;
+  }
+  x = -x * S;
+  return x % N;
 }
 
 int main() {
-    int T; cin >> T;
-    while (T--) cout << solve() << endl;
+  int T;
+  cin >> T;
+  while (T--) cout << solve() << endl;
 }

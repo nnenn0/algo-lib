@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-#include <vector>
 #include <utility>
+#include <vector>
 
 using namespace std;
 
@@ -14,28 +14,30 @@ using namespace std;
 */
 
 vector<pair<char, int>> run_length_encode(const string& str) {
-    int n = int(str.size());
-    vector<pair<char, int>> ret;
-    for (int l = 0; l < n;) {
-        int r = l + 1;
-        for (; r < n && str[l] == str[r]; ++r);
-        ret.push_back({str[l], r-l});
-        l = r;
-    } 
-    return ret;
+  int n = int(str.size());
+  vector<pair<char, int>> ret;
+  for (int l = 0; l < n;) {
+    int r = l + 1;
+    for (; r < n && str[l] == str[r]; ++r)
+      ;
+    ret.push_back({str[l], r - l});
+    l = r;
+  }
+  return ret;
 }
 
 string run_length_decode(const vector<pair<char, int>>& code) {
-    string ret = "";
-    for (auto p : code) {
-        for (int i = 0; i < p.second; ++i) ret.push_back(p.first);
-    }
-    return ret;
+  string ret = "";
+  for (auto p : code) {
+    for (int i = 0; i < p.second; ++i) ret.push_back(p.first);
+  }
+  return ret;
 }
 
 int main() {
-    string s; cin >> s;
-    auto res = run_length_encode(s);
-    for(auto v : res) cout << v.first << v.second;
-    cout << endl;
+  string s;
+  cin >> s;
+  auto res = run_length_encode(s);
+  for (auto v : res) cout << v.first << v.second;
+  cout << endl;
 }

@@ -1,6 +1,6 @@
 #include <iostream>
-#include <vector>
 #include <queue>
+#include <vector>
 
 using namespace std;
 
@@ -17,52 +17,56 @@ using namespace std;
 using Graph = vector<vector<int>>;
 
 struct TopologicalSort {
-    Graph G;
-    vector<int> res;
-    TopologicalSort(Graph G_) {
-        G = G_;
-        sort();
+  Graph G;
+  vector<int> res;
+  TopologicalSort(Graph G_) {
+    G = G_;
+    sort();
+  }
+  void sort() {
+    res = vector<int>();
+    int n = int(G.size());
+    vector<int> deg(n);
+    for (int v = 0; v < n; ++v)
+      for (auto& nv : G[v]) deg.at(nv)++;
+    queue<int> que;
+    for (int i = 0; i < n; ++i)
+      if (deg[i] == 0) que.push(i);
+    while (!que.empty()) {
+      int now = que.front();
+      que.pop();
+      res.push_back(now);
+      for (auto& nv : G[now]) {
+        deg.at(nv)--;
+        if (deg.at(nv) == 0) que.push(nv);
+      }
     }
-    void sort() {
-        res = vector<int>();
-        int n = int(G.size());
-        vector<int> deg(n);
-        for (int v = 0; v < n; ++v) for (auto& nv : G[v]) deg.at(nv)++;
-        queue<int> que;
-        for (int i = 0; i < n; ++i) if (deg[i] == 0) que.push(i);
-        while (!que.empty()) {
-            int now = que.front();
-            que.pop();
-            res.push_back(now);
-            for (auto& nv : G[now]) {
-                deg.at(nv)--;
-                if (deg.at(nv) == 0) que.push(nv);
-            }
-        }
-    }
-    vector<int> get() {
-        return res;
-    }
-    int get_longest_count() {
-        int n = (int)G.size();
-        int m = (int)res.size();
-        if (n != m) return -1;
-        vector<int> dp(n, 0);
-        for (auto& v : res) for (auto& nv : G[v]) dp[nv] = dp[v]+1;
-        int ret = 0;
-        for (int i = 0; i < n; ++i) ret = max(ret, dp[i]);
-        return ret;
-    }
+  }
+  vector<int> get() { return res; }
+  int get_longest_count() {
+    int n = (int)G.size();
+    int m = (int)res.size();
+    if (n != m) return -1;
+    vector<int> dp(n, 0);
+    for (auto& v : res)
+      for (auto& nv : G[v]) dp[nv] = dp[v] + 1;
+    int ret = 0;
+    for (int i = 0; i < n; ++i) ret = max(ret, dp[i]);
+    return ret;
+  }
 };
 
 int main() {
-    int N, M; cin >> N >> M;
-    Graph G(N);
-    for (int i = 0; i < M; ++i) {
-        int x, y; cin >> x >> y;
-        x--; y--;
-        G[x].emplace_back(y);
-    }
-    TopologicalSort ts(G);
-    cout << ts.get_longest_count() << endl;
+  int N, M;
+  cin >> N >> M;
+  Graph G(N);
+  for (int i = 0; i < M; ++i) {
+    int x, y;
+    cin >> x >> y;
+    x--;
+    y--;
+    G[x].emplace_back(y);
+  }
+  TopologicalSort ts(G);
+  cout << ts.get_longest_count() << endl;
 }

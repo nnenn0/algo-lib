@@ -1,6 +1,6 @@
+#include <complex>
 #include <iostream>
 #include <vector>
-#include <complex>
 
 using namespace std;
 
@@ -13,20 +13,21 @@ using namespace std;
 
 using C = complex<double>;
 C rotate_point(C center, C vec, double rad) {
-    C r = {cos(rad), sin(rad)};
-    return center + (vec-center) * r;
+  C r = {cos(rad), sin(rad)};
+  return center + (vec - center) * r;
 }
 
 int main() {
-    int N; cin >> N;
-    double x, y;
-    cin >> x >> y;
-    C s = {x, y};
-    cin >> x >> y;
-    C t = {x, y};
-    C center = (s+t)/2.0;
-    double pi = acos(-1);
-    double rad = 2*pi/N;
-    auto res = rotate_point(center, s, rad);
-    printf("%.10f %.10f\n", res.real(), res.imag());
+  int N;
+  cin >> N;
+  double x, y;
+  cin >> x >> y;
+  C s = {x, y};
+  cin >> x >> y;
+  C t = {x, y};
+  C center = (s + t) / 2.0;
+  double pi = acos(-1);
+  double rad = 2 * pi / N;
+  auto res = rotate_point(center, s, rad);
+  printf("%.10f %.10f\n", res.real(), res.imag());
 }
