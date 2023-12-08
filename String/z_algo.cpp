@@ -1,11 +1,11 @@
-#include <iostream>
-#include <vector>
-#include <string>
 #include <algorithm>
+#include <iostream>
+#include <string>
+#include <vector>
 
 using namespace std;
 
-/* 
+/*
     Z-algorithm O(N)
     z_algo: 配列lcpを求める
     lcp[i]: S自身とS[i:]とが先頭から最大で何文字一致しているかをO(1)で求める
@@ -14,36 +14,37 @@ using namespace std;
 */
 
 vector<int> z_algo(const string& S) {
-    int N = (int)S.size();
-    vector<int> res(N);
-    res[0] = N;
-    int i = 1, j = 0;
-    while (i < N) {
-        while (i+j < N && S[j] == S[i+j]) ++j;
-        res[i] = j;
-        if (j == 0) {
-            ++i;
-            continue;
-        }
-        int k = 1;
-        while (i+k < N && k+res[k] < j) res[i+k] = res[k], ++k;
-        i += k;
-        j -= k;
+  int N = (int)S.size();
+  vector<int> res(N);
+  res[0] = N;
+  int i = 1, j = 0;
+  while (i < N) {
+    while (i + j < N && S[j] == S[i + j]) ++j;
+    res[i] = j;
+    if (j == 0) {
+      ++i;
+      continue;
     }
-    return res;
+    int k = 1;
+    while (i + k < N && k + res[k] < j) res[i + k] = res[k], ++k;
+    i += k;
+    j -= k;
+  }
+  return res;
 }
 
 int main() {
-    int n; string s;
-    cin >> n >> s;
-    int res = 0;
-    for (int i = 0; i < n; ++i) {
-        string t = s.substr(i);
-        auto lcp = z_algo(t);
-        for (int j = 0; j < (int)t.size(); ++j) {
-            int l = min(lcp[j], j);
-            res = max(res, l);
-        } 
+  int n;
+  string s;
+  cin >> n >> s;
+  int res = 0;
+  for (int i = 0; i < n; ++i) {
+    string t = s.substr(i);
+    auto lcp = z_algo(t);
+    for (int j = 0; j < (int)t.size(); ++j) {
+      int l = min(lcp[j], j);
+      res = max(res, l);
     }
-    cout << res << endl;
+  }
+  cout << res << endl;
 }

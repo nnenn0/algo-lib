@@ -1,7 +1,7 @@
-#include <iostream>
-#include <vector>
 #include <algorithm>
+#include <iostream>
 #include <utility>
+#include <vector>
 
 using namespace std;
 
@@ -13,26 +13,28 @@ using namespace std;
 */
 
 int main() {
-    int N; cin >> N;
-    vector<int> start_points(N), end_points(N);
-    for (int i = 0; i < N; ++i) {
-        int x, l; cin >> x >> l;
-        start_points[i] = x - l;
-        end_points[i] = x + l;
+  int N;
+  cin >> N;
+  vector<int> start_points(N), end_points(N);
+  for (int i = 0; i < N; ++i) {
+    int x, l;
+    cin >> x >> l;
+    start_points[i] = x - l;
+    end_points[i] = x + l;
+  }
+  vector<pair<int, int>> p(N);
+  for (int i = 0; i < N; ++i) {
+    p[i].first = end_points[i];
+    p[i].second = start_points[i];
+  }
+  sort(p.begin(), p.end());  // 終点を優先にソート
+  int res = 0;
+  int t = -1000100100;
+  for (int i = 0; i < N; ++i) {
+    if (t <= p[i].second) {
+      res++;
+      t = p[i].first;
     }
-    vector<pair<int, int>> p(N);
-    for (int i = 0; i < N; ++i) {
-        p[i].first = end_points[i];
-        p[i].second = start_points[i];
-    }
-    sort(p.begin(), p.end()); // 終点を優先にソート
-    int res = 0;
-    int t = -1000100100;
-    for (int i = 0; i < N; ++i) {
-        if (t <= p[i].second) {
-            res++;
-            t = p[i].first;
-        }
-    }
-    cout << res << endl;
+  }
+  cout << res << endl;
 }
