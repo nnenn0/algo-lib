@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "random": "cpp",
+    "ostream": "cpp"
+  },
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "cpp": "g++ $fullFileName -o bin/$fileNameWithoutExt && bin/$fileNameWithoutExt"
+  }
+}
